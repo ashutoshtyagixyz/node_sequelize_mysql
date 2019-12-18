@@ -1,0 +1,21 @@
+{
+  "name": "n_app",
+  "version": "1.0.0",
+  "description": "node app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ayush",
+  "license": "ISC",
+  "dependencies": {
+    "debug": "^4.1.1",
+    "debug-logger": "^0.4.1",
+    "express": "^4.17.1",
+    "http": "0.0.0",
+    "morgan": "^1.9.1",
+    "mysql2": "^1.7.0",
+    "sequelize": "^5.19.6"
+  }
+}
