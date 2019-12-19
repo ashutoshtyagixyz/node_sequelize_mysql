@@ -1,4 +1,4 @@
-const Sequelize = require("sequalize");
+const Sequelize = require("sequelize");
 
 const sequelize = new Sequelize("learning_n","root","123456",
 					{
