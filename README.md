@@ -4,7 +4,8 @@ node js with sequelize and mysql
 
 Steps to setup
 1. create mysql user = dev, pass = 123456
-2. npm sequelize db:migrate : for running migrations
+2. run commands "npm install" and install sequelize cli.
+3. npm sequelize db:migrate : for running migrations
 
 
 
