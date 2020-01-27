@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', appRoutes);
-app.use('/user',userRoutes);
+app.use('/users',userRoutes);
 
 app.use((req,res,next)=>{
     res.status(404).sendFile(path.join(__dirname,'views','404.html'));
