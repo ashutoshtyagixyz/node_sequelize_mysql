@@ -84,11 +84,13 @@ exports.registration = (req,res,next) =>{
         "password" : password,
         "email"    : email
     })
-    .then((res)=>{
-        
+    .then((result)=>{
+        console.log('first promise',result);
+        //res.json(result);
     })
     .catch((err)=>{
-        console.log(err);
+        //console.log('catch',err);
+        res.json(err);
     });
-    res.end("end");
+    
 }//register user

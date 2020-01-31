@@ -12,16 +12,34 @@ const User = sequelize.define('users',{
     email : {
         type : Sequelize.STRING,
         validate : {
-            isEmail: true,
+            isEmail: {
+                msg : "Please enter valid email address."
+            }
+
         }
     },
     username : {
         type : Sequelize.STRING,
-        allowNull : false
+        allowNull : false,
+        validate: {
+            notNull: { 
+                msg: "username is required" 
+            },
+        }
     },
     password : {
         type : Sequelize.STRING,
-        allowNull : false
+        allowNull : false,
+
+        validate: {
+            notNull: { 
+                msg: "password is required" 
+            },
+            len: {
+                args: [6,10],
+                msg : "Password must be of min length 6."
+            }
+        }
     }
 });
 
