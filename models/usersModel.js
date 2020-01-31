@@ -9,6 +9,12 @@ const User = sequelize.define('users',{
         allowNull       :   false,
         primaryKey      :   true 
     },
+    email : {
+        type : Sequelize.STRING,
+        validate : {
+            isEmail: true,
+        }
+    },
     username : {
         type : Sequelize.STRING,
         allowNull : false
@@ -20,5 +26,5 @@ const User = sequelize.define('users',{
 });
 
 module.exports = User;
-User.sync( );
+User.sync();
 
