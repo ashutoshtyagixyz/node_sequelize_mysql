@@ -77,10 +77,12 @@ exports.delete = (req,res,next) => {
 exports.registration = (req,res,next) =>{
     const username = req.body.username;
     const password = req.body.password;
+    const email    = req.body.email;
 
     User.create({
         "username" : username,
-        "password" : password
+        "password" : password,
+        "email"    : email
     })
     .then((res)=>{
         
